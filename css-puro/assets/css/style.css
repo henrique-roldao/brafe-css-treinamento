@@ -1,0 +1,142 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #252525;
+}
+
+/* MENU */
+
+.menu {
+    background-color: #252525;
+    padding: 20px 0;
+}
+
+.menu-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu-container::after, .menu-container::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu-logo {
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.menu-nav {
+    float: right;
+    margin-right: 10px;
+}
+
+.menu-nav li {
+    display: inline-block;
+}
+
+.menu-nav li:hover {
+    text-decoration: underline;
+}
+
+.menu-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.125em;
+}
+
+/* INTRO */
+.intro {
+    background: url(../img/bg-intro.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
+    text-align: center;
+    color: #FFF;
+}
+
+
+.intro h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.intro h1::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    margin: 10px auto;
+}
+
+.intro p {
+    font-style: italic;
+    font-size: 1.125em;
+}
+
+/* SOBRE */
+.sobre {
+    padding: 60px 0;
+}
+
+.sobre-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.sobre-container::after, .sobre-container::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sobre h2 {
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 60px;
+}
+
+.sobre-item {
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.sobre-item img {
+    display: block;
+    max-width: 100%;
+}
+
+.sobre-item h3 {
+    font-size: 2.25em;
+    background: #252525;
+    line-height: 1em;
+    width: 220px;
+    color: #FFF;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    padding: 5px 0 10px 0;
+    position: relative;
+    top: -25px;
+}
+
+.sobre > p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    font-style: italic;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 460px;
+}
+
+/* Produtos */
