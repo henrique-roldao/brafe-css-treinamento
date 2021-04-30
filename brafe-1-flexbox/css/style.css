@@ -14,10 +14,24 @@ body {
 	box-sizing: border-box;
 }
 
+.container {
+	display: flex;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+@media (max-width: 739px) {
+	.container {
+		flex-direction: column;
+		max-width: 300px;
+	}
+}
+
 /* Menu */
 
 .menu {
 	background: #252525;
+	padding: 15px 0;
 }
 
 .menu-nav a {
@@ -26,12 +40,48 @@ body {
 	font-size: 1.125em;
 }
 
+.menu-logo {
+	margin: 0 10px;
+}
+
+.menu-nav {
+	flex: 1;
+	align-self: center;
+	margin: 0 10px;
+}
+
+.menu-nav ul {
+	display: flex;
+	float: right;
+	list-style: none;
+}
+
+.menu-nav ul li a {
+	padding: 10px;
+}
+
+@media (max-width: 739px) {
+	.menu-nav{
+		margin: 0;
+	}
+
+	.menu-logo {
+		margin: 0;
+	}
+
+	.menu-nav ul li a {
+		padding-left: 0px;
+	}
+}
+
 /* Intro */
 
 .intro {
 	background: url('../img/bg-intro.jpg') no-repeat center center;
 	background-size: cover;
 	color: #fff;
+	padding: 150px 0;
+	text-align: center;
 }
 
 .intro h1 {
@@ -45,6 +95,7 @@ body {
 	width: 20px;
 	height: 4px;
 	background: #fff;
+	margin: 10px auto;
 }
 
 .intro p {
@@ -52,10 +103,38 @@ body {
 	font-size: 1.125em;
 }
 
+@media (max-width: 739px) {
+	.intro {
+		padding: 60px 0;
+	}
+}
+
 /* Sobre */
+.sobre {
+	padding: 60px 0;
+}
 
 .sobre h2 {
 	font-size: 2.25em;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.sobre-item {
+	flex: 1;
+	margin: 0 10px;
+}
+
+@media (max-width: 739px) {
+	.sobre-item {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+.sobre-item img {
+	display: block;
+	max-width: 100%;
 }
 
 .sobre-item h3 {
@@ -67,12 +146,17 @@ body {
 	font-weight: normal;
 	text-align: center;
 	position: relative;
+	width: 220px;
+	padding: 5px 0 10px 0;
+	top: -25px;
 }
 
 .sobre > p {
 	font-size: 1.125em;
 	line-height: 1.4em;
 	font-style: italic;
+	margin: 20px auto;
+	max-width: 460px;
 }
 
 /* Produtos */
@@ -81,10 +165,18 @@ body {
 	background: #e7e4d8;
 	border-top: 3px solid #d6d3c8;
 	border-bottom: 3px solid #d6d3c8;
+	padding: 60px 0;
+}
+
+.produtos-item {
+	flex: 1;
+	margin: 0 10px 40px 10px;
 }
 
 .produtos-item h2 {
 	font-size: 2.25em;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .produtos-item h2::before {
@@ -96,6 +188,7 @@ body {
 	border-radius: 50%;
 	border: 5px solid #e7e4d8;
 	box-shadow: 0 0 0 5px currentColor;
+	margin: 20px auto;
 }
 
 h2.produtos-paulista::before {
@@ -123,17 +216,49 @@ h2.produtos-mineiro::before {
 	font-size: 1.125em;
 	font-weight: bold;
 	text-transform: uppercase;
+	display: block;
+	width: 180px;
+	padding: 15px 0;
+	margin: 20px auto 0 auto;
+}
+
+@media (max-width: 739px) {
+	.produtos-item {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 }
 
 /* Locais */
+.locais {
+	padding: 60px 0;
+}
+
+.locais-item {
+	margin-bottom: 40px;
+}
+
+.locais-img, .locais-info {
+	flex: 1;
+	margin: 0 10px;
+}
+
+.locais-img img {
+	display: block;
+	max-width: 100%;
+}
+
 
 .locais-item h2 {
 	font-size: 2.25em;
+	margin-bottom: 20px;
 }
 
 .locais-item p {
 	font-size: 1.125em;
 	line-height: 1.4em;
+	max-width: 320px;
+	margin-bottom: 40px;
 }
 
 .locais-item a {
@@ -142,16 +267,38 @@ h2.produtos-mineiro::before {
 	text-decoration: none;
 	border: 3px solid;
 	color: #252525;
+	padding: 10px 20px;
+}
+
+@media (max-width: 739px) {
+	.locais-img, .locais-info {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 }
 
 /* Assine */
 
 .assine {
 	background: #e7e4d8;
+	padding: 30px 0;
+}
+
+.assine-info {
+	flex: 1;
+	margin: 0 10px;
 }
 
 .assine-info h2 {
 	font-size: 2.25em;
+}
+
+.assine form {
+	flex: 1;
+	margin: 0 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
 }
 
 .assine-info p {
@@ -164,6 +311,9 @@ h2.produtos-mineiro::before {
 }
 
 .assine input {
+	flex: 1;
+	align-self: flex-start;
+	padding: 10px;
 	border: 3px solid #252525;
 	background: none;
 	font-size: 1.5em;
@@ -172,6 +322,9 @@ h2.produtos-mineiro::before {
 }
 
 .assine button {
+	flex: 1;
+	padding: 13px;
+	align-self: flex-start;
 	background: #252525;
 	border: none;
 	font-family: Georgia, serif;
@@ -181,13 +334,36 @@ h2.produtos-mineiro::before {
 	cursor: pointer;
 }
 
+@media (max-width: 739px) {
+	.assine-info {
+		margin: 0 0 40px 0;
+	}
+
+	.assine form {
+		margin: 0;
+	}
+}
+
 /*Footer*/
 
 .footer {
 	background: #d6d3c8;
+	padding: 40px 0;
+}
+
+.footer-img {
+	margin: 0 10px;
 }
 
 .footer p {
 	font-size: 1.125em;
 	line-height: 1.4em;
+	margin: 0 10px;
+	flex: 1;
+}
+
+@media (max-width: 739px) {
+	.footer-img, .footer p {
+		margin: 10px 0;
+	}
 }
